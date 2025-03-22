@@ -1,0 +1,1 @@
+export const selectParamsId = ({ app }) => app.paramsId;
