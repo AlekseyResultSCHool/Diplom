@@ -1,4 +1,4 @@
-requestAnimationFrame('dotenv').config()
+require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -175,12 +175,8 @@ app.patch(
   }
 );
 
-mongoose
-  .connect(
-    process.env.DB_CONNECTION_STRING
-  )
-  .then(() => {
-    app.listen(port, () => {
-      console.log(`Server has been started on port ${port}...`);
-    });
+mongoose.connect(process.env.DB_CONNECTION_STRING).then(() => {
+  app.listen(port, () => {
+    console.log(`Server has been started on port ${port}...`);
   });
+});
