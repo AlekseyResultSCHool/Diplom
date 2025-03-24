@@ -60,7 +60,7 @@ const BasketContainer = ({ className }) => {
 	};
 
 	if (orderCount === 0) {
-		setTimeout(() => dispatch(basketOpen(false)), 5000);
+		setTimeout(() => dispatch(basketOpen(false)), 6000);
 		setTimeout(() => setBuy(true), 2000);
 	}
 

@@ -42,7 +42,6 @@ const HeaderContainer = ({ className }) => {
 	useLayoutEffect(() => {
 		if (roleId === ROLE.GUEST) {
 			dispatch(ordersBasketCount(0));
-			return;
 		}
 		request('/reviews', 'GET').then((responce) => {
 			setReviews(responce.data);

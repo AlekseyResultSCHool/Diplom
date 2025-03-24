@@ -26,12 +26,9 @@ const ReviewsContainer = ({ className }) => {
 	setTimeout(() => setLoader(false), 1000);
 
 	useLayoutEffect(() => {
-		request('/reviews', 'GET').then((responce, error) => {
-			if (!error) {
+		request('/reviews', 'GET').then((responce) => {			
 				setReviews(responce.data);
-				setFlag(true);
-			}
-			
+				setFlag(true);			
 		});
 		dispatch(countReviews(reviews.length));
 	}, [flag, answer, dispatch, reviews.length]);
