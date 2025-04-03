@@ -1,0 +1,1 @@
+export const selectOnGoods = ({ onGoods }) => onGoods;
