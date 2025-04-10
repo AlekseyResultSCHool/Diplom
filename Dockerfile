@@ -6,7 +6,7 @@ COPY . .
 
 WORKDIR /usr/src/app/frontend
 RUN npm install
-RUN npm run build
+RUN NODE_OPTIONS=--max-old-space-size=512 npm run build
 
 WORKDIR /usr/src/app/backend
 RUN npm install
